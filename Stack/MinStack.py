@@ -2,6 +2,14 @@ from collections import deque
 
 class MinStack:
 
+    """
+    We create Two stack one of them reponsable for our stack
+    second one responsable for tracking minimal stack.
+    And we just .append() into our MinStack minimal value 
+    between of top-value and bottom-value,
+    so it's like .append(min(val, minStack[-1])) 
+    """
+
     def __init__(self):
         self.stack = deque()
         self.minStack = deque()
